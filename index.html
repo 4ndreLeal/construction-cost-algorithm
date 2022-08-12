@@ -1,0 +1,45 @@
+<meta charset="UTF-8">
+
+<script>
+
+/* 
+
+    Esse algoritmo é capaz de calcular rapidamente o valor necessário
+para pintar a cerca de uma casa, utilizando como parâmetros a largura
+e o comprimento do terreno, assim como o rendimento da tinta utilizada
+e o valor do litro da tinta utilizada.
+
+*/
+
+function dadosCadastrados(c, l, r, ct){
+    mostra("Comprimento do terreno: " + c);
+    mostra("Largura do terreno: " + l);
+    mostra("Rendimento da tinta: " + r);
+    mostra("Custo do litro de tinta: " + ct);
+}
+
+function mostra(mensagem){
+    document.write(mensagem);
+    pulaLinha();
+}
+
+function pulaLinha(){
+    document.write("<br>");
+}
+
+var comprimento = prompt("Informe o comprimento do terreno em metros: ");
+var largura = prompt("Informe a largura do terreno: ");
+var rendimento = prompt("Informe o rendimento da tinta, ou seja, a quantidade de metros quadrados para cada litro de tinta: ");
+var custo = prompt("Informe o custo do litro de tinta: ");
+
+dadosCadastrados(comprimento, largura, rendimento, custo);
+
+var area = comprimento*largura;
+var litrosNecessarios = area/rendimento;
+var custoTotal = custo * litrosNecessarios;
+
+mostra("Custo total: R$ " + custoTotal);
+
+</script>
+
+
