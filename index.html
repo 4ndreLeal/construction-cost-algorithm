@@ -27,10 +27,10 @@ function pulaLinha(){
     document.write("<br>");
 }
 
-var comprimento = prompt("Informe o comprimento do terreno em metros: ");
-var largura = prompt("Informe a largura do terreno: ");
-var rendimento = prompt("Informe o rendimento da tinta, ou seja, a quantidade de metros quadrados para cada litro de tinta: ");
-var custo = prompt("Informe o custo do litro de tinta: ");
+var comprimento = parseFloat(prompt("Informe o comprimento do terreno em metros: "));
+var largura = parseFloat(prompt("Informe a largura do terreno: "));
+var rendimento = parseFloat(prompt("Informe o rendimento da tinta, ou seja, a quantidade de metros quadrados para cada litro de tinta: "));
+var custo = parseFloat(prompt("Informe o custo do litro de tinta: "));
 
 dadosCadastrados(comprimento, largura, rendimento, custo);
 
